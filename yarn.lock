@@ -14,18 +14,6 @@
   dependencies:
     "@hapi/hoek" "^9.0.0"
 
-"@koa/router@8.0.2":
-  version "8.0.2"
-  resolved "https://registry.yarnpkg.com/@koa/router/-/router-8.0.2.tgz#46a48d58cb0d76dc7a3735f14d1e66bbe2116575"
-  integrity sha512-7Wa8yXBmz9HjmZOr+xfMVuxFPNObdkiQFBiwF9SQ8zFqHykwBHcJA/mLqqxU2NKoeXRPBKUOPeOjwgR+gyadcA==
-  dependencies:
-    debug "^3.1.0"
-    http-errors "^1.3.1"
-    koa-compose "^3.0.0"
-    methods "^1.0.1"
-    path-to-regexp "^1.1.1"
-    urijs "^1.19.0"
-
 "@sideway/address@^4.1.0":
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/@sideway/address/-/address-4.1.1.tgz#9e321e74310963fdf8eebfbee09c7bd69972de4d"
@@ -284,10 +272,10 @@ dicer@0.3.0:
   dependencies:
     streamsearch "0.1.2"
 
-flatten@1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/flatten/-/flatten-1.0.3.tgz#c1283ac9f27b368abc1e36d1ff7b04501a30356b"
-  integrity sha512-dVsPA/UwQ8+2uoFe5GHtiBMu48dWLTdsuEd7CKGlZlD78r1TTWBvDuFaFGKCo/ZfEr95Uk56vZoX86OsHkUeIg==
+flatten@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/flatten/-/flatten-1.0.2.tgz#dae46a9d78fbe25292258cc1e780a41d95c03782"
+  integrity sha1-2uRqnXj74lKSJYzB54CkHZXAN4I=
 
 function-bind@^1.1.1:
   version "1.1.1"
@@ -326,6 +314,11 @@ has@^1.0.3:
   integrity sha512-f2dvO0VU6Oej7RkWJGrehjbzMAjFp5/VKPp5tTpWIV4JHHZK1/BxbFRtf/siA2SWTe09caDmVtYYzWEIbBS4zw==
   dependencies:
     function-bind "^1.1.1"
+
+hoek@6.x.x:
+  version "6.1.3"
+  resolved "https://registry.yarnpkg.com/hoek/-/hoek-6.1.3.tgz#73b7d33952e01fe27a38b0457294b79dd8da242c"
+  integrity sha512-YXXAAhmF9zpQbC7LEcREFtXfGq5K1fmd+4PHkBq8NUqmzW3G+Dq10bI/i0KucLRwss3YYFQ0fSfoxBZYiGUqtQ==
 
 http-errors@1.7.3:
   version "1.7.3"
@@ -376,7 +369,23 @@ isarray@0.0.1:
   resolved "https://registry.yarnpkg.com/isarray/-/isarray-0.0.1.tgz#8a18acfca9a8f4177e09abfc6038939b05d1eedf"
   integrity sha1-ihis/Kmo9Bd+Cav8YDiTmwXR7t8=
 
-joi@^17.2.1, joi@^17.3.0:
+isemail@3.x.x:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/isemail/-/isemail-3.2.0.tgz#59310a021931a9fb06bbb51e155ce0b3f236832c"
+  integrity sha512-zKqkK+O+dGqevc93KNsbZ/TqTUFd46MwWjYOoMrjIMZ51eU7DtQG3Wmd9SQQT7i7RVnuTPEiYEWHU3MSbxC1Tg==
+  dependencies:
+    punycode "2.x.x"
+
+joi@14.0.6:
+  version "14.0.6"
+  resolved "https://registry.yarnpkg.com/joi/-/joi-14.0.6.tgz#8c72314af6dba13ca48028a4f0af992ddc5a7472"
+  integrity sha512-mKXPSNYMG3taVBZemQj3pPOlMZGrnnu14JKAC6AHg6jJVX35L7oDk89ss1sHj+laDSEh3mD2PmeheI5k6Aw8nQ==
+  dependencies:
+    hoek "6.x.x"
+    isemail "3.x.x"
+    topo "3.x.x"
+
+joi@^17.3.0:
   version "17.4.0"
   resolved "https://registry.yarnpkg.com/joi/-/joi-17.4.0.tgz#b5c2277c8519e016316e49ababd41a1908d9ef20"
   integrity sha512-F4WiW2xaV6wc1jxete70Rw4V/VuMd6IN+a5ilZsxG4uYtUXWu2kq9W5P2dz30e7Gmw8RCbY/u/uk+dMPma9tAg==
@@ -403,22 +412,34 @@ koa-joi-router-docs@^0.1.9:
     o2team-joi-to-swagger "^1.3.1"
     path-to-regexp "^1.5.3"
 
-koa-joi-router@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/koa-joi-router/-/koa-joi-router-7.0.0.tgz#8e02e27fea56b9e7f81690b2e95faf0cb3e15e1c"
-  integrity sha512-d++c6a2F1bPCqgbvnoZ5FCtxikQbbDJr51faMhvY8DzN05fQfsbAs4JfKIe4FhWgiRe5LE70WpxW9WLG0kPpEQ==
+koa-joi-router@^5.1.0:
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/koa-joi-router/-/koa-joi-router-5.3.0.tgz#09ee797226511a14186a5d847b8e10c0d1924217"
+  integrity sha512-3BozMhnvW5CYlpli3gHPQKnPOIy12JNq3zBqSx85wGyFUvA3GXtJ5DgQoTUFRT4tCm+6Ify3xJ1gjdotJOu2ug==
   dependencies:
-    "@koa/router" "8.0.2"
     await-busboy "1.0.3"
     clone "2.1.2"
     co-body "6.0.0"
     debug "4.1.1"
     delegates "1.0.0"
-    flatten "1.0.3"
+    flatten "1.0.2"
     is-gen-fn "0.0.1"
-    joi "^17.2.1"
+    joi "14.0.6"
+    koa-router "7.4.0"
     methods "1.1.2"
     sliced "1.0.1"
+
+koa-router@7.4.0:
+  version "7.4.0"
+  resolved "https://registry.yarnpkg.com/koa-router/-/koa-router-7.4.0.tgz#aee1f7adc02d5cb31d7d67465c9eacc825e8c5e0"
+  integrity sha512-IWhaDXeAnfDBEpWS6hkGdZ1ablgr6Q6pGdXCyK38RbzuH4LkUOpPqPw+3f8l8aTDrQmBQ7xJc0bs2yV4dzcO+g==
+  dependencies:
+    debug "^3.1.0"
+    http-errors "^1.3.1"
+    koa-compose "^3.0.0"
+    methods "^1.0.1"
+    path-to-regexp "^1.1.1"
+    urijs "^1.19.0"
 
 lodash@^4.0.2, lodash@^4.15.0, lodash@^4.17.21:
   version "4.17.21"
@@ -480,6 +501,11 @@ path-to-regexp@^1.1.1, path-to-regexp@^1.5.3:
   integrity sha512-n43JRhlUKUAlibEJhPeir1ncUID16QnEjNpwzNdO3Lm4ywrBpBZ5oLD0I6br9evr1Y9JTqwRtAh7JLoOzAQdVA==
   dependencies:
     isarray "0.0.1"
+
+punycode@2.x.x:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
+  integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
 qs@^6.5.2:
   version "6.10.1"
@@ -546,6 +572,13 @@ toidentifier@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/toidentifier/-/toidentifier-1.0.0.tgz#7e1be3470f1e77948bc43d94a3c8f4d7752ba553"
   integrity sha512-yaOH/Pk/VEhBWWTlhI+qXxDFXlejDGcQipMlyxda9nthulaxLZUNcUqFxokp0vcYnvteJln5FNQDRrxj3YcbVw==
+
+topo@3.x.x:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/topo/-/topo-3.0.3.tgz#d5a67fb2e69307ebeeb08402ec2a2a6f5f7ad95c"
+  integrity sha512-IgpPtvD4kjrJ7CRA3ov2FhWQADwv+Tdqbsf1ZnPUSAtCJ9e1Z44MmoSGDXGk4IppoZA7jd/QRkNddlLJWlUZsQ==
+  dependencies:
+    hoek "6.x.x"
 
 type-is@^1.6.16:
   version "1.6.18"

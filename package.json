@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "handlebars": "^4.7.7",
-    "koa-joi-router": "^7.0.0",
+    "koa-joi-router": "^5.1.0",
     "koa-joi-router-docs": "^0.1.9",
     "lodash": "^4.17.21"
   },

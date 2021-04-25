@@ -16,7 +16,7 @@ declare type BaseSpec = {
 };
 export declare class Koa2SwaggerUIComponent {
     static boost(router: Router, config: {
-        swaggerOptions: Partial<KoaSwaggerUiOptions>;
+        uiOptions: Partial<KoaSwaggerUiOptions>;
         baseSpec: BaseSpec;
     }): import("koa-compose").Middleware<import("koa").ParameterizedContext<import("koa").DefaultState, import("koa").DefaultContext, any>>;
 }

@@ -17,17 +17,17 @@ export class Koa2SwaggerUIComponent {
   static boost(
     router: Router,
     config: {
-      swaggerOptions: Partial<KoaSwaggerUiOptions>;
+      uiOptions: Partial<KoaSwaggerUiOptions>;
       baseSpec: BaseSpec;
     }
   ) {
     let swagger = new SwaggerAPI();
+    swagger.addJoiRouter(router);
+
     const spec = swagger.generateSpec(config.baseSpec, {
       defaultResponses: {},
     }) as Record<string, unknown>;
 
-    swagger.addJoiRouter(router);
-
-    return koaSwagger({ ...config, swaggerOptions: { spec } });
+    return koaSwagger({ ...config.uiOptions, swaggerOptions: { spec } });
   }
 }
